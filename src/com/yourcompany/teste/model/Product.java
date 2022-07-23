@@ -34,4 +34,8 @@ public class Product {
 	
 	@Stereotype("MEMO")
 	String remarks;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@DescriptionsList
+	Author author;
 }
