@@ -13,7 +13,13 @@ import com.yourcompany.teste.calculator.*;
 import lombok.*;
 
 @Entity @Getter @Setter
-@View(members = "year, number, date;" + "customer;" + "details;" + "remarks")
+@View(members = "year, number, date;"
+		+ "data {"
+			+ "customer;"
+			+ "details;"
+			+ "remarks"
+		+ "}"
+)
 abstract public class CommercialDocument extends Identifiable {
 	
 	@Column(length = 4)
