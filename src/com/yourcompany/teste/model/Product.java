@@ -1,5 +1,7 @@
 package com.yourcompany.teste.model;
 
+import java.math.*;
+
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
@@ -21,5 +23,15 @@ public class Product {
 	(fetch=FetchType.LAZY,
 	optional=true)
 	@DescriptionsList
-	Categoria categoria;
+	Category category;
+	
+	@Stereotype("MONEY")
+	BigDecimal price;
+	
+	@Stereotype("IMAGES_GALLERY")
+	@Column(length = 32)
+	String photos;
+	
+	@Stereotype("MEMO")
+	String remarks;
 }

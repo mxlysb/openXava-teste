@@ -9,14 +9,11 @@ import org.openxava.annotations.*;
 import lombok.*;
 
 @Entity @Getter @Setter
-public class Categoria {
+public class Category {
 	
-	@Id
-	@Hidden
-	@GeneratedValue(generator="system-uuid")
-	@GenericGenerator(name="system-uudi", strategy="uudi")
-	@Column(length=32)
-	String oid;
+	@Id @Hidden @Column(length = 32)
+	@GeneratedValue(generator="system-uuid") @GenericGenerator(name="system-uuid", strategy="uuid")
+	private String oid;
 	
 	@Column(length=50)
 	String description;

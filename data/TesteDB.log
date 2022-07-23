@@ -1,9 +1,5 @@
-/*C4*/SET SCHEMA PUBLIC
+/*C3*/SET SCHEMA PUBLIC
 DISCONNECT
-/*C5*/SET SCHEMA PUBLIC
-create table Teste.Categoria (oid varchar(32) not null, description varchar(50), primary key (oid))
-alter table TESTE.PRODUCT add column categoria_oid varchar(32)
-alter table Teste.Product add constraint FK7sxckwpjdhtu1t68o7ucj69s8 foreign key (categoria_oid) references Teste.Categoria
-SET SCHEMA TESTE
-INSERT INTO PRODUCT VALUES(14,'mesa',NULL)
+/*C4*/SET SCHEMA TESTE
+INSERT INTO INVOICE VALUES('40286f81822be3e901822be44a240000','2022-07-23',1,'',2022,13)
 COMMIT
